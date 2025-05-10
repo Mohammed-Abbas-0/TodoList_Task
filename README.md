@@ -13,9 +13,7 @@ ToDoList_Task/
 ├── Interface ← يحتوي على DTOs و Filters
 ├── WebAPI ← نقطة تشغيل الـ API و Controllers و Dependency Injection
 
-yaml
-Copy
-Edit
+
 
 ---
 
@@ -29,9 +27,7 @@ cd ToDoList_Task
 2. ⚙️ تعديل الاتصال بقاعدة البيانات
 افتح الملف WebAPI/appsettings.json وعدل الـ Connection String:
 
-json
-Copy
-Edit
+
 "ConnectionStrings": {
   "DefaultConnection": "Server=.;Database=TodoDb;Trusted_Connection=True;"
 }
@@ -39,25 +35,19 @@ Edit
 "Server=.\\SQLEXPRESS;Database=TodoDb;Trusted_Connection=True;"
 
 3. 🧱 تنفيذ المايجريشن وإنشاء قاعدة البيانات
-bash
-Copy
-Edit
+
 cd WebAPI
 dotnet ef database update
 💡 لو لسه ما ثبتتش EF CLI:
 dotnet tool install --global dotnet-ef
 
 4. ▶️ شغل المشروع
-bash
-Copy
-Edit
+
 dotnet run
 5. 🌐 افتح الـ Swagger
 بعد ما تشغل المشروع، افتح المتصفح على:
 
-bash
-Copy
-Edit
+
 https://localhost:<your-port>/swagger
 هتلاقي كل الـ endpoints شغالة من خلال واجهة Swagger UI.
 
